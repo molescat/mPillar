@@ -16,19 +16,19 @@ Features:
 * Simple UIButton constraints using Visual Formatting.
     setContentHuggingPriority
 
-* iOS7 topLayoutGuide
+* iOS7 topLayoutGuide.
 
-* Simplification category for adding visual constraints
+* Simplification category for adding visual constraints.
 
-* Simple helper MACRO MXDictionaryOfVariableBindings
+* Simple helper MACRO MXDictionaryOfVariableBindings.
 
-* Simple example of UIScrollView and Autolayout
+* Simple example of UIScrollView and Autolayout.
 
 
 Usage:
 ------
 
-Build and run using Xcode5 (or later), targeting iOS7 (or later)
+Build and run using Xcode5 (or later), targeting iOS7 (or later).
 
 You can optionally add the custom runtime argument `-UIViewShowAlignmentRects YES`, via the scheme editor.
 This will render the Auto layout bounding boxes in a yellow wireframe.
@@ -57,7 +57,7 @@ If you have any feature requests/bug-fixes etc. feel free to help out and send a
 License:
 --------
 
-mStonemason is Copyright (c) 2011-2013 Myles Abbott and released open source
+mPillar is Copyright (c) 2013 Myles Abbott and released open source
 under a MIT license:
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
