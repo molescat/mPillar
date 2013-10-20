@@ -19,18 +19,23 @@
 {
   [super viewDidLoad];
   
-  RedBox *boxRed = [[RedBox alloc] initWithFrame:CGRectZero];
-  [self.view addSubview:boxRed];
+  RedBox *redBox = [[RedBox alloc] initWithFrame:CGRectZero];
+  [self.view addSubview:redBox];
   
-  GreenBox *boxGreen = [[GreenBox alloc] initWithFrame:CGRectZero];
-  [self.view addSubview:boxGreen];
+  GreenBox *greenBox = [[GreenBox alloc] initWithFrame:CGRectZero];
+  [self.view addSubview:greenBox];
   
-  UIView *boxBlue = [[UIView alloc] initWithFrame:CGRectZero];
-  boxBlue.backgroundColor = [UIColor blueColor];
-  [self.view addSubview:boxBlue];
+  UIView *blueBox = [[UIView alloc] initWithFrame:CGRectZero];
+  blueBox.backgroundColor = [UIColor blueColor];
+  [self.view addSubview:blueBox];
   
   OrangeBox *orangeBox = [[OrangeBox alloc] initWithFrame:CGRectZero];
   [self.view addSubview:orangeBox];
+  
+  UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+  label.text = @"Label";
+  label.backgroundColor = [UIColor colorWithWhite:.9f alpha:1.f];
+  [self.view addSubview:label];
   
   UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
   [button setTitle:@"Button" forState:UIControlStateNormal];
@@ -38,22 +43,17 @@
   [button setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
   [self.view addSubview:button];
   
-  UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-  label.text = @"Label";
-  label.backgroundColor = [UIColor colorWithWhite:.9f alpha:1.f];
-  [self.view addSubview:label];
-  
   id topGuide = self.topLayoutGuide; // iOS7
   
-  NSDictionary *layoutViews = MXDictionaryOfVariableBindings(topGuide, boxRed, boxGreen, boxBlue, orangeBox, button, label);
-  [self.view addConstraintWithVisualFormat:@"H:|-[boxRed]-(>=0)-[boxGreen(70)]-10-[boxBlue(50)]-|" bindings:layoutViews];
+  NSDictionary *layoutViews = MXDictionaryOfVariableBindings(topGuide, redBox, greenBox, blueBox, orangeBox, label, button);
+  [self.view addConstraintWithVisualFormat:@"H:|-[redBox]-(>=0)-[greenBox(70)]-10-[blueBox(50)]-|" bindings:layoutViews];
   
-  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][boxRed]" bindings:layoutViews];
-  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][boxGreen(150)]" bindings:layoutViews];
-  [self.view addConstraintWithVisualFormat:@"V:[topGuide][boxBlue(50)]" bindings:layoutViews]; // under constrained
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][redBox]" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][greenBox(150)]" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"V:[topGuide][blueBox(50)]" bindings:layoutViews]; // under constrained
   
   [self.view addConstraintWithVisualFormat:@"H:|-[orangeBox(100)]" bindings:layoutViews];
-  [self.view addConstraintWithVisualFormat:@"V:[orangeBox(300)]-50-|" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide]-55-[orangeBox]-50-|" bindings:layoutViews];
   
   [self.view addConstraintWithVisualFormat:@"H:|-[label]-[button]-|" bindings:layoutViews];
   [self.view addConstraintWithVisualFormat:@"V:[button]-|" bindings:layoutViews];
