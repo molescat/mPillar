@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68A06AD31813C72900271402 /* libReveal.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 68A06AD11813C71300271402 /* libReveal.dylib */; };
+		68A06AD51813C75300271402 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A06AD41813C75300271402 /* CFNetwork.framework */; };
+		68A06AD71813C76100271402 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A06AD61813C76100271402 /* QuartzCore.framework */; };
 		68DF05E0180A8C1100FD3A94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF05DF180A8C1100FD3A94 /* Foundation.framework */; };
 		68DF05E2180A8C1100FD3A94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF05E1180A8C1100FD3A94 /* CoreGraphics.framework */; };
 		68DF05E4180A8C1100FD3A94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF05E3180A8C1100FD3A94 /* UIKit.framework */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68A06AD11813C71300271402 /* libReveal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libReveal.dylib; sourceTree = "<group>"; };
+		68A06AD41813C75300271402 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		68A06AD61813C76100271402 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		68DF05DC180A8C1100FD3A94 /* mPillar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mPillar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68DF05DF180A8C1100FD3A94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68DF05E1180A8C1100FD3A94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A06AD71813C76100271402 /* QuartzCore.framework in Frameworks */,
+				68A06AD51813C75300271402 /* CFNetwork.framework in Frameworks */,
 				68DF05E2180A8C1100FD3A94 /* CoreGraphics.framework in Frameworks */,
 				68DF05E4180A8C1100FD3A94 /* UIKit.framework in Frameworks */,
 				68DF05E0180A8C1100FD3A94 /* Foundation.framework in Frameworks */,
@@ -115,6 +123,8 @@
 		68DF05DE180A8C1100FD3A94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68A06AD61813C76100271402 /* QuartzCore.framework */,
+				68A06AD41813C75300271402 /* CFNetwork.framework */,
 				68DF05DF180A8C1100FD3A94 /* Foundation.framework */,
 				68DF05E1180A8C1100FD3A94 /* CoreGraphics.framework */,
 				68DF05E3180A8C1100FD3A94 /* UIKit.framework */,
@@ -149,6 +159,7 @@
 		68DF05E6180A8C1100FD3A94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68A06AD11813C71300271402 /* libReveal.dylib */,
 				68DF05E7180A8C1100FD3A94 /* mPillar-Info.plist */,
 				68DF05E8180A8C1100FD3A94 /* InfoPlist.strings */,
 				68DF05EB180A8C1100FD3A94 /* main.m */,
@@ -252,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A06AD31813C72900271402 /* libReveal.dylib in Resources */,
 				68DF05F6180A8C1100FD3A94 /* Main_iPad.storyboard in Resources */,
 				68DF05FB180A8C1100FD3A94 /* Images.xcassets in Resources */,
 				68DF05F3180A8C1100FD3A94 /* Main_iPhone.storyboard in Resources */,
@@ -420,6 +432,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mPillar/mPillar-Prefix.pch";
 				INFOPLIST_FILE = "mPillar/mPillar-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mylesabbott/Documents/mCode/mCocoaheads/mPillar/mPillar,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -433,6 +449,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mPillar/mPillar-Prefix.pch";
 				INFOPLIST_FILE = "mPillar/mPillar-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mylesabbott/Documents/mCode/mCocoaheads/mPillar/mPillar,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -499,6 +519,7 @@
 				68DF0613180A8C1200FD3A94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68DF0614180A8C1200FD3A94 /* Build configuration list for PBXNativeTarget "mPillarTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +528,7 @@
 				68DF0616180A8C1200FD3A94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
