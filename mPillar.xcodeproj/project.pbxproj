@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		68A06AD11813C71300271402 /* libReveal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libReveal.dylib; sourceTree = "<group>"; };
+		68A06AD11813C71300271402 /* libReveal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libReveal.dylib; path = ../libReveal.dylib; sourceTree = "<group>"; };
 		68A06AD41813C75300271402 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		68A06AD61813C76100271402 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		68DF05DC180A8C1100FD3A94 /* mPillar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mPillar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,9 +101,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3336D45B181507AE004C7134 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				68A06AD11813C71300271402 /* libReveal.dylib */,
+			);
+			name = lib;
+			path = mPillar;
+			sourceTree = "<group>";
+		};
 		68DF05D3180A8C1100FD3A94 = {
 			isa = PBXGroup;
 			children = (
+				3336D45B181507AE004C7134 /* lib */,
 				68DF05E5180A8C1100FD3A94 /* mPillar */,
 				68DF0607180A8C1100FD3A94 /* mPillarTests */,
 				68DF05DE180A8C1100FD3A94 /* Frameworks */,
@@ -159,7 +169,6 @@
 		68DF05E6180A8C1100FD3A94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				68A06AD11813C71300271402 /* libReveal.dylib */,
 				68DF05E7180A8C1100FD3A94 /* mPillar-Info.plist */,
 				68DF05E8180A8C1100FD3A94 /* InfoPlist.strings */,
 				68DF05EB180A8C1100FD3A94 /* main.m */,
