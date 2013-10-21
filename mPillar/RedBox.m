@@ -18,7 +18,7 @@
 
 - (CGSize)intrinsicContentSize
 {
-  return CGSizeMake(100.f, 50.f);
+  return CGSizeMake(50.f, 50.f);
 }
 
 @end
