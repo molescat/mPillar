@@ -27,7 +27,7 @@
 		68DF060E180A8C1100FD3A94 /* mPillarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DF060D180A8C1100FD3A94 /* mPillarTests.m */; };
 		68DF061F180A8D2C00FD3A94 /* GreenBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DF0618180A8D2C00FD3A94 /* GreenBox.m */; };
 		68DF0620180A8D2C00FD3A94 /* OrangeBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DF061A180A8D2C00FD3A94 /* OrangeBox.m */; };
-		68DF0621180A8D2C00FD3A94 /* RedBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DF061C180A8D2C00FD3A94 /* RedBox.m */; };
+		68DF0621180A8D2C00FD3A94 /* BlueBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DF061C180A8D2C00FD3A94 /* BlueBox.m */; };
 		68DF0622180A8D2C00FD3A94 /* UIView+Constraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DF061E180A8D2C00FD3A94 /* UIView+Constraints.m */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +69,8 @@
 		68DF0618180A8D2C00FD3A94 /* GreenBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenBox.m; sourceTree = "<group>"; };
 		68DF0619180A8D2C00FD3A94 /* OrangeBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeBox.h; sourceTree = "<group>"; };
 		68DF061A180A8D2C00FD3A94 /* OrangeBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeBox.m; sourceTree = "<group>"; };
-		68DF061B180A8D2C00FD3A94 /* RedBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBox.h; sourceTree = "<group>"; };
-		68DF061C180A8D2C00FD3A94 /* RedBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBox.m; sourceTree = "<group>"; };
+		68DF061B180A8D2C00FD3A94 /* BlueBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueBox.h; sourceTree = "<group>"; };
+		68DF061C180A8D2C00FD3A94 /* BlueBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueBox.m; sourceTree = "<group>"; };
 		68DF061D180A8D2C00FD3A94 /* UIView+Constraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraints.h"; sourceTree = "<group>"; };
 		68DF061E180A8D2C00FD3A94 /* UIView+Constraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Constraints.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,10 +154,10 @@
 				68DF05F8180A8C1100FD3A94 /* MPillarViewController.m */,
 				68DF0617180A8D2C00FD3A94 /* GreenBox.h */,
 				68DF0618180A8D2C00FD3A94 /* GreenBox.m */,
+				68DF061B180A8D2C00FD3A94 /* BlueBox.h */,
+				68DF061C180A8D2C00FD3A94 /* BlueBox.m */,
 				68DF0619180A8D2C00FD3A94 /* OrangeBox.h */,
 				68DF061A180A8D2C00FD3A94 /* OrangeBox.m */,
-				68DF061B180A8D2C00FD3A94 /* RedBox.h */,
-				68DF061C180A8D2C00FD3A94 /* RedBox.m */,
 				68DF061D180A8D2C00FD3A94 /* UIView+Constraints.h */,
 				68DF061E180A8D2C00FD3A94 /* UIView+Constraints.m */,
 				68DF05FA180A8C1100FD3A94 /* Images.xcassets */,
@@ -301,7 +301,7 @@
 				68DF05F0180A8C1100FD3A94 /* MPillarAppDelegate.m in Sources */,
 				68DF05EC180A8C1100FD3A94 /* main.m in Sources */,
 				68DF061F180A8D2C00FD3A94 /* GreenBox.m in Sources */,
-				68DF0621180A8D2C00FD3A94 /* RedBox.m in Sources */,
+				68DF0621180A8D2C00FD3A94 /* BlueBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

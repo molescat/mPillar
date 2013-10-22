@@ -4,5 +4,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RedBox : UIView
+@interface BlueBox : UIView
 @end

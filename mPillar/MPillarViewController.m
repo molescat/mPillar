@@ -5,8 +5,8 @@
 #import "MPillarViewController.h"
 
 #import "UIView+Constraints.h"
-#import "RedBox.h"
 #import "GreenBox.h"
+#import "BlueBox.h"
 #import "OrangeBox.h"
 
 @interface MPillarViewController ()
@@ -19,14 +19,14 @@
 {
   [super viewDidLoad];
   
-  RedBox *redBox = [[RedBox alloc] initWithFrame:CGRectZero];
+  UIView *redBox = [[UIView alloc] initWithFrame:CGRectZero];
+  redBox.backgroundColor = [UIColor redColor];
   [self.view addSubview:redBox];
   
   GreenBox *greenBox = [[GreenBox alloc] initWithFrame:CGRectZero];
   [self.view addSubview:greenBox];
   
-  UIView *blueBox = [[UIView alloc] initWithFrame:CGRectZero];
-  blueBox.backgroundColor = [UIColor blueColor];
+  BlueBox *blueBox = [[BlueBox alloc] initWithFrame:CGRectZero];
   [self.view addSubview:blueBox];
   
   OrangeBox *orangeBox = [[OrangeBox alloc] initWithFrame:CGRectZero];
@@ -46,11 +46,11 @@
   id topGuide = self.topLayoutGuide; // iOS7
   
   NSDictionary *layoutViews = MXDictionaryOfVariableBindings(topGuide, redBox, greenBox, blueBox, orangeBox, label, button);
-  [self.view addConstraintWithVisualFormat:@"H:|-[redBox]-(>=0)-[greenBox(70)]-10-[blueBox(50)]-|" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"H:|-[redBox(50)]-20-[greenBox]-(>=0)-[blueBox(60)]-|" bindings:layoutViews];
   
-  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][redBox]" bindings:layoutViews];
-  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][greenBox(150)]" bindings:layoutViews];
-  [self.view addConstraintWithVisualFormat:@"V:[topGuide][blueBox(50)]" bindings:layoutViews]; // under constrained
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][redBox(50)]" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][greenBox(50)]" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][blueBox(190)]" bindings:layoutViews]; // under constrained
   
   [self.view addConstraintWithVisualFormat:@"H:|-[orangeBox(100)]" bindings:layoutViews];
   [self.view addConstraintWithVisualFormat:@"V:|[topGuide]-55-[orangeBox]-50-|" bindings:layoutViews];
