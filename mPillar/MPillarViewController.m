@@ -58,6 +58,10 @@
   [self.view addConstraintWithVisualFormat:@"H:|-[label]-[button]-|" bindings:layoutViews];
   [self.view addConstraintWithVisualFormat:@"V:[button]-|" bindings:layoutViews];
   [self.view addConstraintWithVisualFormat:@"V:[label]-|" bindings:layoutViews];
+  
+  // Test constraint conflicts
+  // [self.view addConstraintWithVisualFormat:@"H:[redBox(55)]" bindings:layoutViews];
+  // [self.view addConstraintWithVisualFormat:@"H:[blueBox(66)]" bindings:layoutViews];
 }
 
 @end
