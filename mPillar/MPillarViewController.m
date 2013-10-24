@@ -49,7 +49,7 @@
   [self.view addConstraintWithVisualFormat:@"H:|-[redBox(50)]-20-[greenBox]-(>=0)-[blueBox(60)]-|" bindings:layoutViews];
   
   [self.view addConstraintWithVisualFormat:@"V:|[topGuide][redBox(50)]" bindings:layoutViews];
-  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][greenBox(50)]" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][greenBox]" bindings:layoutViews];
   [self.view addConstraintWithVisualFormat:@"V:|[topGuide][blueBox(190)]" bindings:layoutViews]; // under constrained
   
   [self.view addConstraintWithVisualFormat:@"H:|-[orangeBox(100)]" bindings:layoutViews];
