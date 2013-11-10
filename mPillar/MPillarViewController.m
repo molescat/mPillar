@@ -29,7 +29,7 @@
   id topGuide = self.topLayoutGuide; // iOS7
   
   NSDictionary *layoutViews = MXDictionaryOfVariableBindings(topGuide, redBox, greenBox, blueBox);
-  [self.view addConstraintWithVisualFormat:@"H:|-[redBox(50)]-20-[greenBox]-(>=0)-[blueBox(50)]-|" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"H:|-20-[redBox(50)]-20-[greenBox]-(>=0)-[blueBox(50)]-20-|" bindings:layoutViews];
   
   [self.view addConstraintWithVisualFormat:@"V:|[topGuide][redBox(50)]" bindings:layoutViews];
   [self.view addConstraintWithVisualFormat:@"V:|[topGuide][greenBox]" bindings:layoutViews];
