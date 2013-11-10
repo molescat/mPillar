@@ -36,8 +36,7 @@
   [self.view addConstraintWithVisualFormat:@"V:|[topGuide][blueBox(50)]" bindings:layoutViews]; // under constrained
   
   // Test constraint conflicts
-  // [self.view addConstraintWithVisualFormat:@"H:[redBox(55)]" bindings:layoutViews];
-  // [self.view addConstraintWithVisualFormat:@"H:[blueBox(66)]" bindings:layoutViews];
+  //[self.view addConstraintWithVisualFormat:@"H:[blueBox(66)]" bindings:layoutViews];
   
   [self addExampleButtonLabel];
 //  [self addExampleScrollView];
