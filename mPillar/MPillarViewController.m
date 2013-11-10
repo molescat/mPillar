@@ -6,12 +6,8 @@
 
 #import "UIView+Constraints.h"
 #import "GreenBox.h"
-#import "BlueBox.h"
+#import "YellowBox.h"
 #import "OrangeBox.h"
-
-@interface MPillarViewController ()
-
-@end
 
 @implementation MPillarViewController
 
@@ -26,29 +22,26 @@
   GreenBox *greenBox = [[GreenBox alloc] initWithFrame:CGRectZero];
   [self.view addSubview:greenBox];
   
-  BlueBox *blueBox = [[BlueBox alloc] initWithFrame:CGRectZero];
+  UIView *blueBox = [[UIView alloc] initWithFrame:CGRectZero];
+  blueBox.backgroundColor = [UIColor cyanColor];
   [self.view addSubview:blueBox];
-  
-  OrangeBox *orangeBox = [[OrangeBox alloc] initWithFrame:CGRectZero];
-  [self.view addSubview:orangeBox];
   
   id topGuide = self.topLayoutGuide; // iOS7
   
-  NSDictionary *layoutViews = MXDictionaryOfVariableBindings(topGuide, redBox, greenBox, blueBox, orangeBox);
-  [self.view addConstraintWithVisualFormat:@"H:|-[redBox(50)]-20-[greenBox]-(>=0)-[blueBox(60)]-|" bindings:layoutViews];
+  NSDictionary *layoutViews = MXDictionaryOfVariableBindings(topGuide, redBox, greenBox, blueBox);
+  [self.view addConstraintWithVisualFormat:@"H:|-[redBox(50)]-20-[greenBox]-(>=0)-[blueBox(50)]-|" bindings:layoutViews];
   
   [self.view addConstraintWithVisualFormat:@"V:|[topGuide][redBox(50)]" bindings:layoutViews];
   [self.view addConstraintWithVisualFormat:@"V:|[topGuide][greenBox]" bindings:layoutViews];
-  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][blueBox(190)]" bindings:layoutViews]; // under constrained
-  
-  [self.view addConstraintWithVisualFormat:@"H:|-[orangeBox(100)]" bindings:layoutViews];
-  [self.view addConstraintWithVisualFormat:@"V:|[topGuide]-55-[orangeBox]-50-|" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide][blueBox(50)]" bindings:layoutViews]; // under constrained
   
   // Test constraint conflicts
   // [self.view addConstraintWithVisualFormat:@"H:[redBox(55)]" bindings:layoutViews];
   // [self.view addConstraintWithVisualFormat:@"H:[blueBox(66)]" bindings:layoutViews];
   
   [self addExampleButtonLabel];
+//  [self addExampleScrollView];
+//  [self addExampleTextBox];
 }
 
 - (void)addExampleButtonLabel
@@ -78,6 +71,30 @@
   [self.view addConstraintWithVisualFormat:@"H:|-[label]-[button]-|" bindings:layoutViews];
   [self.view addConstraintWithVisualFormat:@"V:[button]-|" bindings:layoutViews];
   [self.view addConstraintWithVisualFormat:@"V:[label]-|" bindings:layoutViews];
+}
+
+- (void)addExampleScrollView
+{
+  OrangeBox *orangeBox = [[OrangeBox alloc] initWithFrame:CGRectZero];
+  [self.view addSubview:orangeBox];
+  
+  id topGuide = self.topLayoutGuide; // iOS7
+  
+  NSDictionary *layoutViews = MXDictionaryOfVariableBindings(topGuide, orangeBox);
+  [self.view addConstraintWithVisualFormat:@"H:|-[orangeBox(100)]" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide]-55-[orangeBox]-50-|" bindings:layoutViews];
+}
+
+- (void)addExampleTextBox
+{
+  YellowBox *yellowBox = [[YellowBox alloc] initWithFrame:CGRectZero];
+  [self.view addSubview:yellowBox];
+
+  id topGuide = self.topLayoutGuide; // iOS7
+  
+  NSDictionary *layoutViews = MXDictionaryOfVariableBindings(topGuide, yellowBox);
+  [self.view addConstraintWithVisualFormat:@"H:[yellowBox(100)]-|" bindings:layoutViews];
+  [self.view addConstraintWithVisualFormat:@"V:|[topGuide]-100-[yellowBox(100)]" bindings:layoutViews];
 }
 
 @end

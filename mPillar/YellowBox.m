@@ -2,21 +2,21 @@
 //  Copyright (c) 2013 Myles Abbott. All rights reserved.
 //
 
-#import "BlueBox.h"
+#import "YellowBox.h"
 #import "UIView+Constraints.h"
 
-@interface BlueBox ()
+@interface YellowBox ()
 @property (nonatomic, strong) UILabel *label;
 @end
 
-@implementation BlueBox
+@implementation YellowBox
 
 - (id)initWithFrame:(CGRect)frame
 {
   self = [super initWithFrame:frame];
   if (self)
   {
-    self.backgroundColor = [UIColor cyanColor];
+    self.backgroundColor = [UIColor yellowColor];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.text = @"The quick brown fox jumps over the lazy dog";
