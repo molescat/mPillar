@@ -4,6 +4,8 @@
 
 #import "MPillarAppDelegate.h"
 
+#import <dlfcn.h>
+
 @implementation MPillarAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -14,7 +16,6 @@
 
 #pragma mark - Reveal
 
-#import <dlfcn.h>
 - (void)startReveal
 {
   NSString *revealLibName = @"libReveal";
